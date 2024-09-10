@@ -170,7 +170,7 @@
         const outputContainer = document.querySelector('.output-container');
 
         // List of visible and hidden commands
-        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'college-board', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube'];
+        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'code.org', 'college-board', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube'];
         const hiddenCommands = ['toggle-bg', 'ic', 'ap', 'repo'];
         const allCommands = [...visibleCommands, ...hiddenCommands];
 
@@ -310,6 +310,9 @@
                 case 'repo':
                     window.location.href = 'https://github.com/Technic-Dragon/Opals-Terminal-Tab';
                     return 'Opening Repository...';
+                case 'code.org':
+                    window.location.href = 'https://studio.code.org/home';
+                    return 'Opening Code.org...';
                 default:
                     // If not a command or URL, prompt for search confirmation
                     pendingSearch = command;
@@ -499,7 +502,8 @@
             chatgpt: "Usage: chatgpt\nOpens ChatGPT.",
             desmos: "Usage: desmos\nOpens Desmos Calculator.",
             repository: "Usage: repository\nAliases: repo\nOpens the repository link.",
-            repo: "Usage: repo\nAliases: repository\nOpens the repository link."
+            repo: "Usage: repo\nAliases: repository\nOpens the repository link.",
+            "code.org": "Usage: code.org\nOpens Code.org"
         };
 
         let currentAutocompleteSuggestions = [];
