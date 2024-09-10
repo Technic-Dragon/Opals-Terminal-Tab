@@ -170,8 +170,8 @@
         const outputContainer = document.querySelector('.output-container');
 
         // List of visible and hidden commands
-        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'college-board', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'schoology', 'turnitin', 'webassign', 'youtube'];
-        const hiddenCommands = ['toggle-bg', 'ic', 'ap'];
+        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'college-board', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube'];
+        const hiddenCommands = ['toggle-bg', 'ic', 'ap', 'repo'];
         const allCommands = [...visibleCommands, ...hiddenCommands];
 
         // Add this variable to keep track of the background state
@@ -304,6 +304,12 @@
                 case 'desmos':
                     window.location.href = 'https://www.desmos.com/calculator';
                     return 'Opening Desmos...';
+                case 'repository':
+                    window.location.href = 'https://github.com/Technic-Dragon/Opals-Terminal-Tab';
+                    return 'Opening Repository...';
+                case 'repo':
+                    window.location.href = 'https://github.com/Technic-Dragon/Opals-Terminal-Tab';
+                    return 'Opening Repository...';
                 default:
                     // If not a command or URL, prompt for search confirmation
                     pendingSearch = command;
@@ -491,7 +497,9 @@
             instagram: "Usage: instagram\nOpens Instagram.",
             reddit: "Usage: reddit\nOpens Reddit.",
             chatgpt: "Usage: chatgpt\nOpens ChatGPT.",
-            desmos: "Usage: desmos\nOpens Desmos Calculator."
+            desmos: "Usage: desmos\nOpens Desmos Calculator.",
+            repository: "Usage: repository\nAliases: repo\nOpens the repository link.",
+            repo: "Usage: repo\nAliases: repository\nOpens the repository link."
         };
 
         let currentAutocompleteSuggestions = [];
