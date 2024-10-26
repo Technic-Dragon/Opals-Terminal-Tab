@@ -24,7 +24,7 @@
             overflow: hidden;
         }
         body.bg-enabled {
-            background-image: url('https://github.com/Technic-Dragon/Opals-New-Tab/blob/main/arty.jpg?raw=true');
+            background-image: url('https://raw.githubusercontent.com/Technic-Dragon/Opals-Terminal-Tab/refs/heads/main/Celeste%20Moon.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -170,7 +170,7 @@
         const outputContainer = document.querySelector('.output-container');
 
         // List of visible and hidden commands
-        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'code.org', 'college-board', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube'];
+        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'code.org', 'college-board','dnd', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube'];
         const hiddenCommands = ['toggle-bg', 'ic', 'ap', 'repo'];
         const allCommands = [...visibleCommands, ...hiddenCommands];
 
@@ -313,6 +313,9 @@
                 case 'code.org':
                     window.location.href = 'https://studio.code.org/s/csa2-2024';
                     return 'Opening Code.org...';
+                case 'dnd':
+                    window.location.href = 'http://reddoom.ddns.net:30000/join';
+                    return 'Opening Foundry...';
                 default:
                     // If not a command or URL, prompt for search confirmation
                     pendingSearch = command;
@@ -503,7 +506,8 @@
             desmos: "Usage: desmos\nOpens Desmos Calculator.",
             repository: "Usage: repository\nAliases: repo\nOpens the repository link.",
             repo: "Usage: repo\nAliases: repository\nOpens the repository link.",
-            "code.org": "Usage: code.org\nOpens Code.org"
+            "code.org": "Usage: code.org\nOpens Code.org",
+            dnd: "Usage: dnd\nOpens Foundry"
         };
 
         let currentAutocompleteSuggestions = [];
