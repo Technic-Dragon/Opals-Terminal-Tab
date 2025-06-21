@@ -170,7 +170,7 @@
         const outputContainer = document.querySelector('.output-container');
 
         // List of visible and hidden commands
-        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'code.org', 'college-board','dnd', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube'];
+        const visibleCommands = ['help', 'clear', 'canvas', 'chatgpt', 'classroom', 'code.org', 'college-board','dnd', 'desmos', 'drive', 'github', 'infinite-campus', 'instagram', 'mail', 'reddit', 'repository', 'schoology', 'turnitin', 'webassign', 'youtube', 'zLibrary'];
         const hiddenCommands = ['toggle-bg', 'ic', 'ap', 'repo'];
         const allCommands = [...visibleCommands, ...hiddenCommands];
 
@@ -316,6 +316,9 @@
                 case 'dnd':
                     window.location.href = 'http://reddoom.ddns.net:30000/join';
                     return 'Opening Foundry...';
+                case 'zLibrary':
+                    window.location.href = 'https://z-library.sk/';
+                    return 'Opening Z-Library...';
                 default:
                     // If not a command or URL, prompt for search confirmation
                     pendingSearch = command;
@@ -507,7 +510,8 @@
             repository: "Usage: repository\nAliases: repo\nOpens the repository link.",
             repo: "Usage: repo\nAliases: repository\nOpens the repository link.",
             "code.org": "Usage: code.org\nOpens Code.org",
-            dnd: "Usage: dnd\nOpens Foundry"
+            dnd: "Usage: dnd\nOpens Foundry",
+            zLibrary: "Usage: zLibrary\nOpens Z-Library"
         };
 
         let currentAutocompleteSuggestions = [];
