@@ -211,7 +211,7 @@
             // Check if there's a pending search confirmation
             if (pendingSearch) {
                 if (cmd === 'yes' || cmd === 'y' || command.trim() === '') {
-                    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(pendingSearch)}`;
+                    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(pendingSearch)} -ai`;
                     window.location.href = searchUrl;
                     const response = `Searching for "${pendingSearch}"...`;
                     pendingSearch = null;
@@ -560,3 +560,4 @@
     </script>
 </body>
 </html>
+
