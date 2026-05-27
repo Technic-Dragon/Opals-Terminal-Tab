@@ -175,7 +175,7 @@
         const allCommands = [...visibleCommands, ...hiddenCommands];
 
         // Add this variable to keep track of the background state
-        let backgroundEnabled = false;
+        let backgroundEnabled = true;
 
         // Function to get the ASCII art banner
         function getBanner() {
@@ -211,7 +211,7 @@
             // Check if there's a pending search confirmation
             if (pendingSearch) {
                 if (cmd === 'yes' || cmd === 'y' || command.trim() === '') {
-                    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(pendingSearch)}`;
+                    const searchUrl = `https://duckduckgo.com/?t=ffab&q=${encodeURIComponent(pendingSearch)}`;
                     window.location.href = searchUrl;
                     const response = `Searching for "${pendingSearch}"...`;
                     pendingSearch = null;
